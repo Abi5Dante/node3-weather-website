@@ -83,7 +83,7 @@ app.get('/products', (req, res) => {
 
 app.get('/help/*', (req, res) => {
     res.render('error', {
-        name: 'Abi',
+        name: 'Abi Showkath',
         title: 'Error',
         message: 'Article not found'
     })
