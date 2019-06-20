@@ -9,11 +9,18 @@ const forcast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback("Unable to get weather data. Try another search.", undefined)
         } else {
-            callback(undefined, {
-                summary: daily.data[0].summary,
-                temperature: currently.temperature,
-                precipProbability: currently.precipProbability
-            })
+            callback(
+                undefined, 
+                'There is a ' 
+                + daily.data[0].summary 
+                + ' It is currently '
+                + currently.temperature
+                + ' degrees celcius '
+                + ' High - ' + daily.data[0].temperatureHigh
+                + ' Low - ' + daily.data[0].temperatureLow
+                + '. There is a '
+                + currently.precipProbability + '% chance of rain.'
+            )
         }
     })
 }
