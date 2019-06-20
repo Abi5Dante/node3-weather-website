@@ -64,9 +64,7 @@ app.get('/weather', (req, res) => {
                 location,
                 summary,
                 temperature,
-                precipProbability,
-                high,
-                low
+                precipProbability
             })
         })
     })
